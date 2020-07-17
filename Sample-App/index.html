@@ -3,23 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <title>Kendo Sample App</title>
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.bootstrap-v4.min.css" /> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="assets/kendo-bootstrap.css" type="text/css" rel="stylesheet"/> 
     <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jquery.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
   </head>
   <header>
-    <ul id="menu">
-      <li class="k-state-active"><a href="/">Home</a></li>
-      <li>More
-          <ul>
-              <li>Blog</li>
-              <li>Products</li>
-          </ul>
-      </li>
-      <li>About Us</li>
-  </ul>
-    </div>
+    <div id="example">
+            <ul id="menu">
+                <li>
+                    Products
+                    <ul>
+                        <li>
+                            Furniture
+                            <ul>
+                                <li>Tables & Chairs</li>
+                                <li>Sofas</li>
+                                <li>Occasional Furniture</li>
+                                <li>Children's Furniture</li>
+                                <li>Beds</li>
+                            </ul>
+
+
+                        </li>
+                        <li>
+                            Decor
+                            <ul>
+                                <li>Bed Linen</li>
+                                <li>Throws</li>
+                                <li>Curtains & Blinds</li>
+                                <li>Rugs</li>
+                                <li>Carpets</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Storage
+                            <ul>
+                                <li>Wall Shelving</li>
+                                <li>Kids Storage</li>
+                                <li>Baskets</li>
+                                <li>Multimedia Storage</li>
+                                <li>Floor Shelving</li>
+                                <li>Toilet Roll Holders</li>
+                                <li>Storage Jars</li>
+                                <li>Drawers</li>
+                                <li>Boxes</li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            Lights
+                            <ul>
+                                <li>Ceiling</li>
+                                <li>Table</li>
+                                <li>Floor</li>
+                                <li>Shades</li>
+                                <li>Wall Lights</li>
+                                <li>Spotlights</li>
+                                <li>Push Light</li>
+                                <li>String Lights</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    About Us
+                </li>
+                <li disabled="disabled">
+                    Blog
+                </li>
+            </ul>
   </header>
   <body>
     <div class="wrapper">
@@ -173,77 +225,77 @@ $(document).ready(function() {
         });
 </script>
 <style>
-  .wrapper {
-    display: flex;
-  }
-  .gridContainer {
-    flex: 0 0 70%;
-    display: inline-block;
-  }
-  .emptyContainer {
-    width: 10%;
-  }
-  .drawerContainer {
-    flex: 1;
-    display: inline-block;
-    width: 40%;
-  }
-  /*Menu*/
-  #menu {
-    background-color: darkgreen;
-    color: white;
-  }
-  /*Grid*/
-  .customer-photo {
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-size: 32px 35px;
-        background-position: center center;
-        vertical-align: middle;
-        line-height: 32px;
-        box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
-        margin-left: 5px;
+    .wrapper {
+      display: flex;
     }
-    .customer-name {
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 32px;
-        padding-left: 3px;
+    .gridContainer {
+      flex: 0 0 70%;
+      display: inline-block;
     }
-    /*Drawer*/
-    #drawer-content li {
-            font-size: 1.2em;
-            padding-left: .89em;
-            background: 0 0;
-            border-radius: 0;
-            border-width: 0 0 1px;
-            border-color: rgba(33, 37, 41, 0.125);
-            border-style: solid;
-            line-height: 1.5em;
-            padding: 1.09em .84em 1.23em .84em;
-        }
-
-        #drawer-content li:last-child {
-            border: 0;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #example .demo-section {
-            max-width: 640px;
-        }
-
-        .k-toolbar .k-icon {
-            font-size: 18px;
-        }
-        /*Footer*/
-        footer {
-          text-align: center;
-          color: white;
-          background-color: darkgreen;
-        }
-</style>
+    .emptyContainer {
+      width: 10%;
+    }
+    .drawerContainer {
+      flex: 1;
+      display: inline-block;
+      width: 40%;
+    }
+   /*Menu*/
+     #menu li {
+         padding-left: 15px;
+         padding-right: 15px;
+     }      
+    /*Grid*/
+    .customer-photo {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-size: 32px 35px;
+          background-position: center center;
+          vertical-align: middle;
+          line-height: 32px;
+          box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+          margin-left: 5px;
+      }
+      .customer-name {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 32px;
+          padding-left: 3px;
+      }
+      /*Drawer*/
+      #drawer-content li {
+              font-size: 1.2em;
+              padding-left: .89em;
+              background: 0 0;
+              border-radius: 0;
+              border-width: 0 0 1px;
+              border-color: rgba(33, 37, 41, 0.125);
+              border-style: solid;
+              line-height: 1.5em;
+              padding: 1.09em .84em 1.23em .84em;
+          }
+  
+          #drawer-content li:last-child {
+              border: 0;
+          }
+  
+          .hidden {
+              display: none;
+          }
+  
+          #example .demo-section {
+              max-width: 640px;
+          }
+  
+          .k-toolbar .k-icon {
+              font-size: 18px;
+          }
+          /*Footer*/
+          footer {
+            text-align: center;
+            color: white;
+            background-color: darkgreen;
+          }
+  </style>
