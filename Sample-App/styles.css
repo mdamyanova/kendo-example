@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Kendo UI";
+  src: url("http://cdn.kendostatic.com/2013.3.1030/styles/images/kendoui.woff")
+      format("woff"),
+    url("http://cdn.kendostatic.com/2013.3.1030/styles/images/kendoui.ttf")
+      format("truetype");
+}
+
+body:before {
+  font-family: "Kendo UI";
+  content: "\a0";
+  font-size: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+#example {
+  padding-top: 2em;
+}
+
+header {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  background-color: #272727;
+}
+
+#menu {
+  margin-bottom: 30px;
+}
+
+#gridContainer {
+  position: relative;
+}
+
+.ra-section {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: #428bca;
+  font-size: 0.8571em;
+  padding: 2em 0;
+}
+
+@media (max-width: 900px) {
+  .gridContainer {
+    width: 100% !important;
+  }
+  .drawerContainer {
+    visibility: hidden;
+  }
+}

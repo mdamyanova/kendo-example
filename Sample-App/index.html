@@ -1,229 +1,178 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kendo Sample App</title>
-    <link href="assets/kendo-bootstrap.css" type="text/css" rel="stylesheet" />
-    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="stylesheet" href="vendor/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.common-bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://cdn.kendostatic.com/2020.2.617/styles/kendo.default.mobile.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.dataviz.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.dataviz.bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2020.2.617/js/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <header>
-    <div id="example">
-      <ul id="menu">
-        <li>
-          Products
-          <ul>
-            <li>
-              Furniture
-              <ul>
-                <li>Tables & Chairs</li>
-                <li>Sofas</li>
-                <li>Occasional Furniture</li>
-                <li>Children's Furniture</li>
-                <li>Beds</li>
-              </ul>
-            </li>
-            <li>
-              Decor
-              <ul>
-                <li>Bed Linen</li>
-                <li>Throws</li>
-                <li>Curtains & Blinds</li>
-                <li>Rugs</li>
-                <li>Carpets</li>
-              </ul>
-            </li>
-            <li>
-              Storage
-              <ul>
-                <li>Wall Shelving</li>
-                <li>Kids Storage</li>
-                <li>Baskets</li>
-                <li>Multimedia Storage</li>
-                <li>Floor Shelving</li>
-                <li>Toilet Roll Holders</li>
-                <li>Storage Jars</li>
-                <li>Drawers</li>
-                <li>Boxes</li>
-              </ul>
-            </li>
-            <li>
-              Lights
-              <ul>
-                <li>Ceiling</li>
-                <li>Table</li>
-                <li>Floor</li>
-                <li>Shades</li>
-                <li>Wall Lights</li>
-                <li>Spotlights</li>
-                <li>Push Light</li>
-                <li>String Lights</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          About Us
-        </li>
-        <li disabled="disabled">
-          Blog
-        </li>
-      </ul>
-    </div>
-  </header>
   <body>
-    <div class="wrapper">
-      <div class="gridContainer">
-        <div id="grid"></div>
-      </div>
-      <div class="emptyContainer"></div>
-      <div class="drawerContainer">
-        <div class="demo-section k-content wide">
-          <div id="toolbar"></div>
-          <div id="drawer">
-            <div id="drawer-content">
-              <div id="Inbox">
-                <ul class="inboxList">
-                  <li>
-                    <h6>Monday meeting</h6>
-                    <p>
-                      Hi Tom, Since Monday I'll be out of office, I'm
-                      rescheduling the meeting for Tuesday.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>I'm sorry, Tom</h6>
-                    <p>
-                      Hi Tom, my aunt comes for a visit this Saturday, so I
-                      can't come back to St. Pete...
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div id="Notifications" class="hidden">
-                <ul>
-                  <li>Monday meeting</li>
-                  <li>Regarding org chart changes</li>
-                  <li>Meeting with Cliff</li>
-                  <li>Global Marketing Meeting</li>
-                  <li>Out tonight with collegues?</li>
-                </ul>
-              </div>
-              <div id="Calendar" class="hidden">
-                <ul>
-                  <li>
-                    <h6>11/5 Monday</h6>
-                    <p>Martha Birthday</p>
-                  </li>
-                  <li>
-                    <h6>15/6 Sunday</h6>
-                    <p>Job interview for internal position</p>
-                  </li>
-                </ul>
-              </div>
-              <div id="Attachments" class="hidden">
-                <ul>
-                  <li>Build enterprise apps</li>
-                  <li>Fw: Regarding Multiline textbox</li>
-                  <li>Away next week</li>
-                  <li>Fw: Your Costume is ready</li>
-                  <li>Update completed</li>
-                </ul>
-              </div>
-              <div id="Favourites" class="hidden">
-                <ul>
-                  <li>90% Discount!</li>
-                  <li>90% Discount!</li>
-                  <li>One time offer!</li>
-                </ul>
+    <header>
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#drawer">Drawer</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </header>
+
+    <div id="example" class="container">
+      <div class="row clearfix">
+        <div class="col-lg-8">
+          <section id="gridContainer" class="well">
+            <div id="grid" class="ra-section"></div>
+          </section>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="ra-section">
+            <div class="demo-section k-content wide">
+              <div id="toolbar"></div>
+              <div id="drawer">
+                <div id="drawer-content">
+                  <div id="Inbox">
+                    <ul class="inboxList">
+                      <li>
+                        <h6>Monday meeting</h6>
+                        <p>
+                          Hi Tom, Since Monday I'll be out of office, I'm
+                          rescheduling the meeting for Tuesday.
+                        </p>
+                      </li>
+                      <li>
+                        <h6>I'm sorry, Tom</h6>
+                        <p>
+                          Hi Tom, my aunt comes for a visit this Saturday, so I
+                          can't come back to St. Pete...
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="Notifications" class="hidden">
+                    <ul>
+                      <li>Monday meeting</li>
+                      <li>Regarding org chart changes</li>
+                      <li>Meeting with Cliff</li>
+                      <li>Global Marketing Meeting</li>
+                      <li>Out tonight with collegues?</li>
+                    </ul>
+                  </div>
+                  <div id="Calendar" class="hidden">
+                    <ul>
+                      <li>
+                        <h6>11/5 Monday</h6>
+                        <p>Martha Birthday</p>
+                      </li>
+                      <li>
+                        <h6>15/6 Sunday</h6>
+                        <p>Job interview for internal position</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="Attachments" class="hidden">
+                    <ul>
+                      <li>Build enterprise apps</li>
+                      <li>Fw: Regarding Multiline textbox</li>
+                      <li>Away next week</li>
+                      <li>Fw: Your Costume is ready</li>
+                      <li>Update completed</li>
+                    </ul>
+                  </div>
+                  <div id="Favourites" class="hidden">
+                    <ul>
+                      <li>90% Discount!</li>
+                      <li>90% Discount!</li>
+                      <li>One time offer!</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <footer><p>2020 - Kendo Sample App</p></footer>
     </div>
   </body>
-  <footer><p>2020 - Kendo Sample App</p></footer>
 </html>
 <script>
-  $(document).ready(function () {
-    $("#menu").kendoMenu();
-  });
-  $(document).ready(function () {
-    $("#grid").kendoGrid({
-      dataSource: {
-        type: "odata",
-        transport: {
-          read:
-            "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers",
-        },
-        pageSize: 20,
-      },
-      height: 550,
-      groupable: true,
-      sortable: true,
-      pageable: {
-        refresh: true,
-        pageSizes: true,
-        buttonCount: 5,
-      },
-      columns: [
-        {
-          template:
-            "<div class='customer-photo'" +
-            "style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
-            "<div class='customer-name'>#: ContactName #</div>",
-          field: "ContactName",
-          title: "Contact Name",
-          width: 240,
-        },
-        {
-          field: "ContactTitle",
-          title: "Contact Title",
-        },
-        {
-          field: "CompanyName",
-          title: "Company Name",
-        },
-        {
-          field: "Country",
-          width: 150,
-        },
-      ],
-    });
-  });
-  $(document).ready(function () {
-    $("#drawer").kendoDrawer({
-      template:
-        "<ul> \
-                            <li data-role='drawer-item' class='k-state-selected'><span class='k-icon k-i-inbox'></span><span class='k-item-text'>Inbox</span></li> \
-                            <li data-role='drawer-separator'></li> \
-                            <li data-role='drawer-item'><span class='k-icon k-i-notification k-i-bell'></span><span class='k-item-text'>Notifications</span></li> \
-                            <li data-role='drawer-item'><span class='k-icon k-i-calendar'></span><span class='k-item-text'>Calendar</span></li> \
-                            <li data-role='drawer-separator'></li> \
-                            <li data-role='drawer-item'><span class='k-icon k-i-hyperlink-email'></span><span class='k-item-text'>Attachments</span></li> \
-                            <li data-role='drawer-item'><span class='k-icon k-i-star-outline k-i-bookmark-outline'></span><span class='k-item-text'>Favourites</span></li> \
-                          </ul>",
-      mode: "push",
-      mini: true,
-      itemClick: function (e) {
-        if (!e.item.hasClass("k-drawer-separator")) {
-          e.sender.drawerContainer
-            .find("#drawer-content > div")
-            .addClass("hidden");
-          e.sender.drawerContainer
-            .find("#drawer-content")
-            .find("#" + e.item.find(".k-item-text").text())
-            .removeClass("hidden");
-        }
-      },
-      position: "left",
-      minHeight: 330,
-      swipeToOpen: true,
-    });
-  });
+  $("#menu").kendoMenu();
 
+  $("#grid").kendoGrid({
+    dataSource: {
+      type: "odata",
+      transport: {
+        read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders",
+      },
+      serverPaging: true,
+      serverSorting: true,
+      serverFiltering: true,
+      pageSize: 10,
+    },
+    scrollable: false,
+    sortable: true,
+    groupable: true,
+    pageable: { buttonCount: 4 },
+    columns: [
+      { field: "OrderID", width: "70px" },
+      { field: "ShipCountry", title: "Ship Country", width: "20%" },
+      { field: "ShipAddress", title: "Ship Address" },
+    ],
+  });
+  $("#drawer").kendoDrawer({
+    template:
+      "<ul> \
+                              <li data-role='drawer-item' class='k-state-selected'><span class='k-icon k-i-inbox'></span><span class='k-item-text'>Inbox</span></li> \
+                              <li data-role='drawer-separator'></li> \
+                              <li data-role='drawer-item'><span class='k-icon k-i-notification k-i-bell'></span><span class='k-item-text'>Notifications</span></li> \
+                              <li data-role='drawer-item'><span class='k-icon k-i-calendar'></span><span class='k-item-text'>Calendar</span></li> \
+                              <li data-role='drawer-separator'></li> \
+                              <li data-role='drawer-item'><span class='k-icon k-i-hyperlink-email'></span><span class='k-item-text'>Attachments</span></li> \
+                              <li data-role='drawer-item'><span class='k-icon k-i-star-outline k-i-bookmark-outline'></span><span class='k-item-text'>Favourites</span></li> \
+                            </ul>",
+    mode: "push",
+    mini: true,
+    itemClick: function (e) {
+      if (!e.item.hasClass("k-drawer-separator")) {
+        e.sender.drawerContainer
+          .find("#drawer-content > div")
+          .addClass("hidden");
+        e.sender.drawerContainer
+          .find("#drawer-content")
+          .find("#" + e.item.find(".k-item-text").text())
+          .removeClass("hidden");
+      }
+    },
+    minHeight: 330,
+    swipeToOpen: true,
+  });
   function toggleDrawer() {
     var drawerInstance = $("#drawer").data().kendoDrawer;
     var drawerContainer = drawerInstance.drawerContainer;
@@ -246,91 +195,4 @@
       { template: "<h3 style='margin-left: 20px;'>Mail Box</h3>" },
     ],
   });
-  $(window).on("resize", function() {
-      kendo.resize($(".gridContainer"));
-    });
 </script>
-<style>
-  .wrapper {
-    display: flex;
-  }
-  .gridContainer {
-    flex: 0 0 70%;
-    display: inline-block;
-  }
-  .emptyContainer {
-    width: 10%;
-  }
-  .drawerContainer {
-    flex: 1;
-    display: inline-block;
-    width: 40%;
-  }
-  /*Menu*/
-  #menu li {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /*Grid*/
-  .customer-photo {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-size: 32px 35px;
-    background-position: center center;
-    vertical-align: middle;
-    line-height: 32px;
-    box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-left: 5px;
-  }
-  .customer-name {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 32px;
-    padding-left: 3px;
-  }
-  /*Drawer*/
-  #drawer-content li {
-    font-size: 1.2em;
-    padding-left: 0.89em;
-    background: 0 0;
-    border-radius: 0;
-    border-width: 0 0 1px;
-    border-color: rgba(33, 37, 41, 0.125);
-    border-style: solid;
-    line-height: 1.5em;
-    padding: 1.09em 0.84em 1.23em 0.84em;
-  }
-
-  #drawer-content li:last-child {
-    border: 0;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  #example .demo-section {
-    max-width: 640px;
-  }
-
-  .k-toolbar .k-icon {
-    font-size: 18px;
-  }
-  /*Footer*/
-  footer {
-    text-align: center;
-    color: white;
-    background-color: #494138;
-  }
-
-  @media (max-width: 900px) {
-    .gridContainer {
-      width: 100% !important;
-    }
-    .drawerContainer {
-      visibility: hidden;
-    }
-  }
-</style>
