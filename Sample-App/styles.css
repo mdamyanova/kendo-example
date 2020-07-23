@@ -23,6 +23,10 @@ body {
   min-width: 320px;
 }
 
+.container {
+  padding-left: 3px;
+}
+
 #example {
   padding-top: 2em;
 }

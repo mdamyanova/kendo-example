@@ -43,7 +43,7 @@
       </ul>
     </header>
 
-    <div id="example" class="container">
+    <div id="example">
       <div class="row clearfix">
         <div class="col-lg-8">
           <section id="gridContainer" class="well">
@@ -51,7 +51,7 @@
           </section>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 drawerContainer">
           <div class="ra-section">
             <div class="demo-section k-content wide">
               <div id="toolbar"></div>
@@ -172,6 +172,7 @@
     },
     minHeight: 330,
     swipeToOpen: true,
+    position: 'right'
   });
   function toggleDrawer() {
     var drawerInstance = $("#drawer").data().kendoDrawer;
@@ -186,13 +187,13 @@
 
   $("#toolbar").kendoToolBar({
     items: [
+      { template: "<h3 style='margin: auto;'>Mail Box</h3>" },
       {
         type: "button",
         icon: "menu",
         attributes: { class: "k-flat" },
         click: toggleDrawer,
       },
-      { template: "<h3 style='margin-left: 20px;'>Mail Box</h3>" },
     ],
   });
 </script>
